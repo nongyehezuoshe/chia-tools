@@ -150,6 +150,10 @@ def update_csv():
 		writer.writerow(maindata["lastnft"])
 	nftout.close()
 
+def move_minted_file():
+	subprocess.run(["mv","nft/"+maindata["data"]["name_nft"],"nft_minted/"],capture_output=True,text=True)
+	subprocess.run(["mv","meta/"+maindata["data"]["name_meta"],"meta_minted/"],capture_output=True,text=True)
+
 def mint_nft():
 	set_hash()
 	mint_amount=maindata["amount"]
@@ -162,9 +166,15 @@ def mint_nft():
 		set_offer()
 		mint_amount=mint_amount-1
 		update_csv()
+		move_minted_file()
 		tool_print(sys._getframe().f_lineno,"DONE, left: "+str(mint_amount))
 		time.sleep(5)
 	return
 
 if __name__ == "__main__":
-	mint_nft()
+	try:
+		while True:
+			mint_nft()
+	except KeyboardInterrupt:
+		_cancel=subprocess.run(['chia', 'wallet', 'delete_unconfirmed_transactions', '-i', options["i"], '-f', options["f"]],capture_output=True,text=True)
+		print(_cancel.stdout)
