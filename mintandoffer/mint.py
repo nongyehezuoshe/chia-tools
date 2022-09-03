@@ -31,13 +31,13 @@ def tool_print(line,text):
 def mint_new_nft():
 	with open('hash.csv', 'r') as inp:
 		reader = csv.DictReader(inp)
-		_flag=0
+		# _flag=0
 		for row in reader:
-			if _flag==1:
+			# if _flag==1:
 				for i in maindata["data"]:
 					maindata["data"][i]=row[i]
 				break
-			_flag=_flag+1
+			# _flag=_flag+1
 
 	_f=options["f"]
 	_i=options["i"]
