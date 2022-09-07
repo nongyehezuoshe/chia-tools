@@ -7,7 +7,9 @@ options={
 	"page":60
 }
 maindata={
-	"uris":[]
+	"uris":[],
+	"id":[],
+	"owner":[]
 }
 
 def tool_print(line,text):
@@ -24,13 +26,19 @@ def get_addrfromspacescan():
 			if r.status_code==200:
 				for i in r.json()["data"]:
 					maindata["uris"].append(i["nft_info"]["data_uris"][0].split("/")[3])
+					maindata["id"].append(i["nft_id"].strip())
+					maindata["owner"].append(i["owner_hash"].strip())
 					tool_print(sys._getframe().f_lineno,i["nft_info"]["data_uris"][0].split("/")[3])
 
 			_page=_page+1
-			time.sleep(10)
+			time.sleep(3)
 			continue
 		except Exception as e:
 			print(e)
+
+	for i in range(0,len(maindata["uris"])):
+		with open("minted_img","a") as f:
+			f.writelines(maindata["uris"][i]+","+maindata["id"][i]+","+maindata["owner"][i]+"\n")
 
 	print(maindata["uris"]);
 
