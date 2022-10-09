@@ -5,7 +5,8 @@ import os,sys,subprocess,time
 options={
 	"f":"708222379", # Fingerprint
 	"i":"4", # wallet ID
-	"ta":"xch1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqm6ks6e8mvy" # traget/burn address
+	"ta":"xch1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqm6ks6e8mvy", # traget/burn address
+	"m":"0" # Set the fees per transaction, in XCH. [default: 0]
 }
 
 maindata={
@@ -18,7 +19,7 @@ def tool_print(line,text):
 def nft_trans(id):
 	while True:
 		tool_print(sys._getframe().f_lineno,"transfer begain")
-		_sub=subprocess.run(['chia', 'wallet', 'nft', 'transfer', '-f', options["f"], '-i', options["i"], '-ni',id[1],"-ta",options["ta"]],capture_output=True,text=True)
+		_sub=subprocess.run(['chia', 'wallet', 'nft', 'transfer', '-m', options["m"], '-f', options["f"], '-i', options["i"], '-ni',id[1],"-ta",options["ta"]],capture_output=True,text=True)
 		# print(_sub.stdout.split("\n"))
 		if _sub.returncode==0:
 			_out=_sub.stdout.split("\n")
