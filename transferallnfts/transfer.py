@@ -5,7 +5,7 @@ import os,sys,subprocess,time
 maindata={
 	"f":"708222379", # 指纹 - 设置指纹指定使用哪个钱包 / fingerprint - Set the fingerprint to specify which wallet  to use
 	"i":"3", # 钱包ID / Id of the NFT wallet to use
-	"ta":"xch1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqm6ks6e8mvy" # 目标地址 - 接收方钱包地址 / target-address - Target recipient wallet address
+	"ta":"xch1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqm6ks6e8mvy", # 目标地址 - 接收方钱包地址 / target-address - Target recipient wallet address
 	"m":"0", # 手续费 - 设置交易手续费，单位XCH，默认0 / fee - Set the fees per transaction, in XCH.[default: 0]
 }
 
