@@ -1,2 +1,2 @@
-# bsh
-some python script for bsh community
+# chia-tools
+some python script for chia.
