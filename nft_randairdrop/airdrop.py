@@ -1,5 +1,5 @@
 #! /usr/bin/env python3
-import sys,subprocess,random
+import sys,subprocess,random,os
 
 options={
 	"chia_cmd":"chia", # chia路径 /chia cmd location
@@ -9,7 +9,8 @@ options={
 }
 
 maindata={
-	"transfer_id":""
+	"transfer_id":"",
+	"addr_index":""
 }
 
 def tool_print(line,text):
@@ -40,6 +41,7 @@ def get_allnfts():
 def get_rand_addr():
 	_len=len(open("input_data.csv").readlines())
 	_rand=random.randint(0,_len-1)
+	maindata["addr_index"]=_rand
 	_lines=open("input_data.csv").readlines()
 	return _lines[_rand].strip()
 
@@ -82,8 +84,18 @@ def nft_trans_checked():
 						if ii.split(":")[1].strip()==maindata["transfer_id"]:
 							return False
 							break
+			file_update()
 			return True
 		time.sleep(5)
+
+def file_update():
+	open("input_data_new.csv", 'w').close()
+	_lines=open("input_data.csv").readlines()
+	_newdata=open("input_data_new.csv","a")
+	for line in range(0,len(_lines)):
+		if line!=maindata["addr_index"]:
+			_newdata.writelines(_lines[line].strip()+"\n")
+	os.rename("input_data_new.csv", "input_data.csv")
 
 def nft_airdrop():
 	_addr=get_rand_addr()
