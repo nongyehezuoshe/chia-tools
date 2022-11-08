@@ -1,5 +1,5 @@
 #! /usr/bin/env python3
-import sys,subprocess,random,os
+import sys,subprocess,random,os,time
 
 options={
 	"chia_cmd":"chia", # chia路径 /chia cmd location
@@ -57,7 +57,7 @@ def nft_trans(id,addr):
 	tool_print(str(sys._getframe().f_lineno)+" "+"random airdrop addr:",str(addr))
 	while True:
 		tool_print(sys._getframe().f_lineno,"transfer begain")
-		_sub=subprocess.run(['chia', 'wallet', 'nft', 'transfer', '-f', options["f"], '-i', options["i"], '-m', options["m"], '-ni',str(id),"-ta",str(addr)],capture_output=True,text=True)
+		_sub=subprocess.run(['chia', 'wallet', 'nft', 'transfer', '-f', options["f"], '-i', options["i"], '-m', options["m"], '-ni',str(id[0]),"-ta",str(addr)],capture_output=True,text=True)
 		print(_sub.stdout.split("\n"))
 		if _sub.returncode==0:
 			_out=_sub.stdout.split("\n")
