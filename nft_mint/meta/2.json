@@ -1,0 +1,58 @@
+{
+    "format": "CHIP-0007",
+    "name": "nft_name #2",
+    "description": "nft description.",
+    "sensitive_content": false,
+    "collection": {
+        "name": "collection_name",
+        "id": "c2bad6fb-5b2f-47f6-b158-524c559b6725",
+        "attributes": [
+            {
+                "type": "description",
+                "value": "NFT collection description"
+            },
+            {
+                "type": "icon",
+                "value": "https://www.test.com/icon.png"
+            },
+            {
+                "type": "banner",
+                "value": "https://www.test.com/banner.png"
+            },
+            {
+                "type": "website",
+                "value": "https://www.test.com"
+            },
+            {
+                "type": "twitter",
+                "value": "@xxxx"
+            },
+            {
+                "type": "discord",
+                "value": "https://discord.com/invite/xxxx"
+            }
+        ]
+    },
+    "attributes": [
+        {
+            "trait_type": "background",
+            "value": "grass green"
+        },
+        {
+            "trait_type": "body",
+            "value": "clear water green"
+        },
+        {
+            "trait_type": "clothes",
+            "value": "black vest"
+        },
+        {
+            "trait_type": "jewelry",
+            "value": "ruby"
+        },
+        {
+            "trait_type": "hair",
+            "value": "chunli"
+        }
+    ]
+}
