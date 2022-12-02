@@ -1,0 +1,54 @@
+{
+    "format": "CHIP-0007",
+    "name": "Freckle Girls II #201",
+    "description": "Furike is a freckled girl, every girl has her own unique charm, freckles are also her lovely existence.Furike is every girl, every independent and confident girl.",
+    "sensitive_content": false,
+    "collection": {
+        "name": "Freckle Girls II",
+        "id": "614fa088-2e8d-4964-835c-8b23ec2a112f",
+        "attributes": [
+            {
+                "type": "description",
+                "value": "Furike is a freckled girl, every girl has her own unique charm, freckles are also her lovely existence.Furike is every girl, every independent and confident girl."
+            },
+            {
+                "type": "icon",
+                "value": "https://bafybeia7ntyq4xoiwym32sy5z3e3z7bcvdcmgtauhmuewgf4etxqvdgofe.ipfs.nftstorage.link/fg2_icon.png"
+            },
+            {
+                "type": "banner",
+                "value": "https://bafybeia7ntyq4xoiwym32sy5z3e3z7bcvdcmgtauhmuewgf4etxqvdgofe.ipfs.nftstorage.link/fg2_banner.png"
+            },
+            {
+                "type": "website",
+                "value": "https://twitter.com/yanzhan22714570"
+            },
+            {
+                "type": "twitter",
+                "value": "@yanzhan22714570"
+            }
+        ]
+    },
+    "attributes": [
+        {
+            "trait_type": "background",
+            "value": "grass green"
+        },
+        {
+            "trait_type": "body",
+            "value": "fiery-rabbit"
+        },
+        {
+            "trait_type": "clothes",
+            "value": "grey-vest"
+        },
+        {
+            "trait_type": "jewelry",
+            "value": "none"
+        },
+        {
+            "trait_type": "hair",
+            "value": "chunli"
+        }
+    ]
+}

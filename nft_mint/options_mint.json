@@ -1,0 +1,118 @@
+{
+	"default_options":{
+		"options_type":{
+			"value":"0",
+			"description":"默认的配置文件方式,0：引导选择，1：配置文件|default options type,0:guide,1:options file"
+		},
+		"chia_localtion":{
+			"value":"chia",
+			"description":"default chia locatlion"
+		},
+		"chia_config":{
+			"value":"/root/.chia/mainnet/config/",
+			"description":"default chia config file locatlion"
+		},
+		"rpc_url":{
+			"value":"https://localhost",
+			"description":"default RPC url"
+		},
+		"rpc_port_wallet":{
+			"value":"9256",
+			"description":"default RPC wallet port"
+		},
+		"f":{
+			"value":"708222379",
+			"description":""
+		},
+		"i":{
+			"value":"9",
+			"description":""
+		},
+		"rp":{
+			"value":"500",
+			"description":""
+		},
+		"m":{
+			"value":"0",
+			"description":""
+		},
+		"ra":{
+			"value":"xch1l63jc638ln892za2ur6ml3p7n0ez6llt45mjuuxyz24zz8erphnqs8l4m2",
+			"description":""
+		},
+		"ta":{
+			"value":"xch1l63jc638ln892za2ur6ml3p7n0ez6llt45mjuuxyz24zz8erphnqs8l4m2",
+			"description":""
+		},
+		"nftaddr":{
+			"value":"https://bafybeihsslxjl7bkjfs3kxjxgghxmni5xmezsoowvub3kwqflv56qkuw34.ipfs.nftstorage.link/",
+			"description":""
+		},
+		"metaaddr":{
+			"value":"https://bafybeibtuqeullh5vwdrqhizsmaufe4kphrzkb4oyozwxht24yqiu5pzhe.ipfs.nftstorage.link/",
+			"description":""
+		},
+		"lu":{
+			"value":"https://creativecommons.org/licenses/by/4.0/legalcode.txt",
+			"description":""
+		},
+		"lh":{
+			"value":"9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411",
+			"description":""
+		}
+	},
+	"i18n":{
+		"options_type":{
+			"zh_CN":"请选择如何配置NFT选项？[0/1]",
+			"en":"How to set NFT options?"
+		},
+		"options_type_0":{
+			"zh_CN":"0: 通过引导进行选择\n",
+			"en":"How to set NFT options?"
+		},
+		"options_type_1":{
+			"zh_CN":"1: 手动修改配置文件",
+			"en":"How to set NFT options?"
+		},
+		"f_des":{
+			"zh_CN":"指纹。【必须】",
+			"en":"Fingerprint"
+		},
+		"i_des":{
+			"zh_CN":"钱包ID。【必须】",
+			"en":"Fingerprint"
+		},
+		"rp_des":{
+			"zh_CN":"版税。类型：数字，推荐：500，例如：500，表示版税是5%。【必须】",
+			"en":"Fingerprint"
+		},
+		"m_des":{
+			"zh_CN":"铸造的手续费。类型：数字，单位xch，推荐：0.0000035，默认：0。【选填】",
+			"en":"Fingerprint"
+		},
+		"ra_des":{
+			"zh_CN":"版税地址。用于接收NFT交易的版税，任意XCH地址。【必须】",
+			"en":"ra"
+		},
+		"ta_des":{
+			"zh_CN":"接收铸造完成的NFT的地址。要求是当前指纹内的XCH地址。【必须】",
+			"en":"Fingerprint"
+		},
+		"nftaddr_des":{
+			"zh_CN":"存放NFT图片的网址",
+			"en":"Fingerprint"
+		},
+		"metaaddr_des":{
+			"zh_CN":"存放NFT的meta文件的网址",
+			"en":"Fingerprint"
+		},
+		"lu_des":{
+			"zh_CN":"许可证网址。默认：无。【选填】",
+			"en":"Fingerprint"
+		},
+		"lh_des":{
+			"zh_CN":"许可证hash。默认：无。【选填】",
+			"en":"Fingerprint"
+		}
+	}
+}
