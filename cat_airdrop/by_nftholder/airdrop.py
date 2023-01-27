@@ -71,7 +71,7 @@ def cat_transfer(inner_address):
 		}
 		cat_spend=tool_requests("wallet","cat_spend",json.dumps(_j))
 		if cat_spend["success"] and cat_spend["transaction_id"]:
-			tool_print(str(sys._getframe().f_lineno)+" "+"transfer",inner_address+" "+str(amount))
+			tool_print(str(sys._getframe().f_lineno)+" "+"transfer",inner_address+" "+str(amount/1000))
 			return cat_spend["transaction_id"]
 		else:
 			time.sleep(10)
@@ -107,7 +107,7 @@ def sql_all(holders):
 	xch_array=[]
 	for i in holders:
 		_xch_addr=i
-		cur.execute("""INSERT INTO """+table+""" VALUES(?,?,?);""",(_xch_addr,holders[i],0))
+		cur.execute("""INSERT INTO """+table+""" VALUES(?,?,?);""",(_xch_addr,holders[i]*int(tool_options("cat_amount"))*1000,0))
 		xch_array.append(_xch_addr)
 
 	conn.commit()
