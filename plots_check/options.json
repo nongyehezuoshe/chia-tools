@@ -1,0 +1,12 @@
+{
+	"plots_path":{
+		"value":[
+			"/media/sdb1/chia/op"
+		],
+		"description":"需要测试plots的路径 | plots location."
+	},
+	"chia_path":{
+		"value":"chia",
+		"description":"chia命令的路径 | chia command location."
+	}
+}

@@ -1,0 +1,26 @@
+{
+	"disk_path":{
+		"value":"/media/sdb1",
+		"description":"需要检测硬盘容量的路径"
+	},
+	"disk_size":{
+		"value":25,
+		"description":"检测硬盘容量的阈值，单位:G"
+	},
+	"file_location":{
+		"value":"./location",
+		"description":"将要删除文件所在路径"
+	},
+	"file_endswith":{
+		"value":".txt",
+		"description":"将要删除文件的扩展名，注意加上小数点，比如：.plot"
+	},
+	"file_time":{
+		"value":"20221030-20221231",
+		"description":"将要删除文件所在日期区间，中间使用短横线连接，无空格"
+	},
+	"time_interval":{
+		"value":10,
+		"description":"硬盘容量检测间隔时长，单位：秒"
+	}
+}

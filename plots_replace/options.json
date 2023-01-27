@@ -1,0 +1,18 @@
+{
+	"plots_path":{
+		"value":"/mnt/ram2",
+		"description":"新生成plots的路径 | new plots location."
+	},
+	"plots_path_target":{
+		"value":"/mnt/sas2/1/op",
+		"description":"需要替换的plots路径，plots_check.csv的评分文件也应当放在此目录中 | replace target location, plots_check.csv should also be placed in this location."
+	},
+	"ratio":{
+		"value":1,
+		"description":"新生成的plots评分，低于该评分将删除并重新绘图 | ratio of new plots, lower than it will be deleted and replot."
+	},
+	"ratio_target":{
+		"value":0.9,
+		"description":"将要替换的plots的评分，低于该评分的将会被替换 | ratio of be replaced plots, lower than it will be replaced."
+	}
+}

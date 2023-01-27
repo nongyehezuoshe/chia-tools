@@ -1,0 +1,33 @@
+{
+	"chia_ssl":{
+		"value":"/root/.chia/mainnet/config/ssl",
+		"description":"ssl证书/文件夹的路径 | chia ssl location."
+	},
+	"chia_port":{
+		"value":{
+			"wallet":9256,
+			"farmer":8559,
+			"full_node":8555,
+			"harvester":8560
+		},
+		"description":"chia命令的路径 | chia command location."
+	},
+	"cat_fingerprint":{
+		"value":463350105
+	},
+	"cat_wallet_id":{
+		"value":5,
+		"description":"代币的钱包ID | cat wallet id."
+	},
+	"cat_amount":{
+		"value":1,
+		"description":"空投代币的数量 | airdrop cat amount."
+	},
+	"cat_fee":{
+		"value":0,
+		"description":"代币转账的手续费，单位：mojo | An optional blockchain fee, in mojos."
+	},
+	"cat_check_time":{
+		"value":10
+	}
+}
