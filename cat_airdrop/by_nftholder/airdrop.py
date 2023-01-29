@@ -57,11 +57,11 @@ def tool_requests(type,endpoint,data):
 			time.sleep(10)
 
 def cat_transfer(inner_address):
-	tool_print(str(sys._getframe().f_lineno)+" "+"inner_address",inner_address)
+	# tool_print(str(sys._getframe().f_lineno)+" "+"inner_address",inner_address)
 	tool_checkstatus()
 	amount=sql_amount(inner_address)
-	print(inner_address,amount)
-	return False
+	# print(inner_address,amount)
+	# return False
 	while amount:
 		_j={
 			"wallet_id":tool_options("cat_wallet_id"),
@@ -155,7 +155,7 @@ def nft_holders():
 					for i in r.json()["items"]:
 						_holder_xch=i["owner_address_encoded_id"]
 						_holder_nft=i["encoded_id"]
-						_holder_mount=list(ii.values())[0]
+						_holder_mount=int(list(ii.values())[0])
 						if _holder_xch in tool_options("nft_exclude_addr") or _holder_nft in tool_options("nft_exclude_nftid"):
 							continue
 						else:
@@ -168,12 +168,12 @@ def nft_holders():
 							# holders.append([_holder_xch,_holder_mount])
 							# holders[_holder_xch]=holders[_holder_xch] or holders[_holder_xch]+_holder_mount
 							if _holder_xch in holders:
-								holders[_holder_xch]=holders[_holder_xch]+_holder_mount
+								holders[_holder_xch]=int(holders[_holder_xch])+_holder_mount
 							else:
 								holders[_holder_xch]=_holder_mount
 
 
-				page="page="+r.json()["next"]+"&"
+				page="page="+str(r.json()["next"])+"&"
 				if r.json()["next"]==r.json()["page"]:
 					break
 				time.sleep(3)

@@ -28,26 +28,31 @@
 	},
 	"nft_collection_id":{
 		"value":[
-			{"col17jxrr7pwxuhxra86z4gr08tajk3mpr7gjst643a7gv0dc8p8p9aqdcvj30":1}
+			{"col17jxrr7pwxuhxra86z4gr08tajk3mpr7gjst643a7gv0dc8p8p9aqdcvj30":10},
+			{"col1lqdkghxfwj7v0ajka0ww4q5ljkzjh8xgm28h7e3s4sh03smrmxxsn8qcpw":2}
 		],
 		"description":"mintgarden.io定义的NFT collection ID及对应的代币空投数量 | the NFT collection ID from mintgarden.io and airdrop cat amount."
 	},
 	"nft_exclude_addr":{
 		"value":[
-			"xch1spt6zex0t355henffj4axxkr370hghqmtllfujdgzc982sqtjrsq3f0wxz",
-			"xch146vhq2a5jv6vpcxgl6drvc4vdtta9qmlvsms0eer88t0clc9kafqu8kaf6"
+			"xch1v82la0hyxut6ffjslwfcqu84tzyd9u3r99fkj8ye7gzhzel2zmnqrerwvq",
+			"xch12pt4qjxvx05skpqk8x70663fqjyqxg3jgh7deeek4ak8khw7c5hq8gh32h",
+			"xch1gdlhxafzs7eahul654rh462tvasegmpu7tvda3r3wml3aaauxtgqxp7umm",
+			"xch1rs3uxumpjzca9tltxm8kd6jqex6apztn8072zz48yswvgtj02vss4xdarw",
+			"xch1dyfxapzxzuv3zmhlm6ncfvjk83tpmfu308s9p92cuv74agmvztps58v0dh",
+			"xch17mxv57hptvnwv46cs80yw96uzvpmk07yun04p8mp87zvqwtzvl5qdutq9w"
 		],
 		"description":"需要排除的XCH地址 | exclude XCH address."
 	},
 	"nft_exclude_nftid":{
 		"value":[
-			"nft1zxyudxvwmjerpsk6hpp32t7c4ukdrmaq4r77ntufk33edhsa9l9q7squjr",
-			"nft1rvmyp45pc9ng9udwjfkejmkf6jtpkx6yzg9g2hqh4lwkeaqpt4lsxehe32"
+			"nft1ey2zt5amyvqax3yj7ywjr9j9cam9p6nhh8wamvmg350257xwhwwq9ht0zk",
+			"nft1wf4ut2q3nrdmetxupexgevrk0psyw28q4wdkch02rlf6farnpsmsjtdxks"
 		],
 		"description":"需要排除的NFT ID | exclude NFT ID."
 	},
 	"loop_time":{
 		"value":24,
 		"description":"循环间隔时长，单位:小时 | loop interval in hours."
-	},
+	}
 }
