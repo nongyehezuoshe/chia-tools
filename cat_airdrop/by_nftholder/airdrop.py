@@ -185,15 +185,19 @@ def nft_holders():
 	return holders
 
 if __name__ == "__main__":
-	options=json.loads(open("config/options.json","rb").read())
-	holders=nft_holders()
-	xchaddrs,table=sql_all(holders)
-	for i in xchaddrs:
-		tool_print(str(sys._getframe().f_lineno)+" "+"transfer to",i)
-		transaction_id=cat_transfer(i)
-		tool_print(str(sys._getframe().f_lineno)+" "+"transaction_id",transaction_id)
-		while transaction_id:
-			if not cat_transfer_check(transaction_id,i):
-				time.sleep(tool_options("cat_check_time"))
-			else:
-				break
+	while True:
+		options=json.loads(open("config/options.json","rb").read())
+		holders=nft_holders()
+		xchaddrs,table=sql_all(holders)
+		for i in xchaddrs:
+			tool_print(str(sys._getframe().f_lineno)+" "+"transfer to",i)
+			transaction_id=cat_transfer(i)
+			tool_print(str(sys._getframe().f_lineno)+" "+"transaction_id",transaction_id)
+			while transaction_id:
+				if not cat_transfer_check(transaction_id,i):
+					time.sleep(tool_options("cat_check_time"))
+				else:
+					break
+		time.sleep(tool_options("loop_time")*60*60)
+
+

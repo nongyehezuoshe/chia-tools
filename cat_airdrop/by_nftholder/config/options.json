@@ -45,5 +45,9 @@
 			"nft1rvmyp45pc9ng9udwjfkejmkf6jtpkx6yzg9g2hqh4lwkeaqpt4lsxehe32"
 		],
 		"description":"需要排除的NFT ID | exclude NFT ID."
-	}
+	},
+	"loop_time":{
+		"value":24,
+		"description":"循环间隔时长，单位:小时 | loop interval in hours."
+	},
 }
