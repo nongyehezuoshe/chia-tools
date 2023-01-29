@@ -19,10 +19,6 @@
 		"value":5,
 		"description":"代币的钱包ID | cat wallet id."
 	},
-	"cat_amount":{
-		"value":1,
-		"description":"空投代币的数量 | airdrop cat amount."
-	},
 	"cat_fee":{
 		"value":0,
 		"description":"代币转账的手续费，单位：mojo | An optional blockchain fee, in mojos."
@@ -32,10 +28,9 @@
 	},
 	"nft_collection_id":{
 		"value":[
-			"col17jxrr7pwxuhxra86z4gr08tajk3mpr7gjst643a7gv0dc8p8p9aqdcvj30",
-			"col1lqdkghxfwj7v0ajka0ww4q5ljkzjh8xgm28h7e3s4sh03smrmxxsn8qcpw"
+			{"col17jxrr7pwxuhxra86z4gr08tajk3mpr7gjst643a7gv0dc8p8p9aqdcvj30":1}
 		],
-		"description":"mintgarden.io定义的NFT collection ID | the NFT collection ID from mintgarden.io."
+		"description":"mintgarden.io定义的NFT collection ID及对应的代币空投数量 | the NFT collection ID from mintgarden.io and airdrop cat amount."
 	},
 	"nft_exclude_addr":{
 		"value":[

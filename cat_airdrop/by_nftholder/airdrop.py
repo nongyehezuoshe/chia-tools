@@ -65,13 +65,13 @@ def cat_transfer(inner_address):
 	while amount:
 		_j={
 			"wallet_id":tool_options("cat_wallet_id"),
-			"amount":amount,
+			"amount":amount*1000,
 			"fee":tool_options("cat_fee"),
 			"inner_address":inner_address
 		}
 		cat_spend=tool_requests("wallet","cat_spend",json.dumps(_j))
 		if cat_spend["success"] and cat_spend["transaction_id"]:
-			tool_print(str(sys._getframe().f_lineno)+" "+"transfer",inner_address+" "+str(amount/1000))
+			tool_print(str(sys._getframe().f_lineno)+" "+"transfer",inner_address+" "+str(amount))
 			return cat_spend["transaction_id"]
 		else:
 			time.sleep(10)
@@ -107,7 +107,7 @@ def sql_all(holders):
 	xch_array=[]
 	for i in holders:
 		_xch_addr=i
-		cur.execute("""INSERT INTO """+table+""" VALUES(?,?,?);""",(_xch_addr,holders[i]*int(tool_options("cat_amount"))*1000,0))
+		cur.execute("""INSERT INTO """+table+""" VALUES(?,?,?);""",(_xch_addr,holders[i],0))
 		xch_array.append(_xch_addr)
 
 	conn.commit()
@@ -135,22 +135,43 @@ def sql_amount(xchaddr):
 
 def nft_holders():
 	tool_print(str(sys._getframe().f_lineno)+" "+"get holders data","...")
-	holders=[]
+	# holders=[]
+	holders={}
+	nft_special=[]
+
+	if os.path.exists("config/nft_special.csv"):
+		nft_special=open("config/nft_special.csv","r").read().split("\n")
+		def not_empty(ele):
+			return ele and ele.strip()
+		nft_special=list(filter(not_empty,nft_special))
+
 	for ii in tool_options("nft_collection_id"):
 		page=""
 		while True:
 			try:
-				tool_print(str(sys._getframe().f_lineno)+" "+"request:","https://api.mintgarden.io/collections/"+ii+"/nfts?"+page+"size=100")
-				r = requests.get("https://api.mintgarden.io/collections/"+ii+"/nfts?"+page+"size=100")
+				tool_print(str(sys._getframe().f_lineno)+" "+"request:","https://api.mintgarden.io/collections/"+list(ii.keys())[0]+"/nfts?"+page+"size=100")
+				r = requests.get("https://api.mintgarden.io/collections/"+list(ii.keys())[0]+"/nfts?"+page+"size=100")
 				if r.status_code==200:
 					for i in r.json()["items"]:
 						_holder_xch=i["owner_address_encoded_id"]
 						_holder_nft=i["encoded_id"]
+						_holder_mount=list(ii.values())[0]
 						if _holder_xch in tool_options("nft_exclude_addr") or _holder_nft in tool_options("nft_exclude_nftid"):
 							continue
 						else:
+							for iii in nft_special:
+								if iii.split(",")[0].strip() == _holder_nft:
+									_holder_mount=iii.split(",")[1].strip()
+									break
+
 							tool_print(str(sys._getframe().f_lineno)+" "+"holders",i["owner_address_encoded_id"])
-							holders.append(i["owner_address_encoded_id"])
+							# holders.append([_holder_xch,_holder_mount])
+							# holders[_holder_xch]=holders[_holder_xch] or holders[_holder_xch]+_holder_mount
+							if _holder_xch in holders:
+								holders[_holder_xch]=holders[_holder_xch]+_holder_mount
+							else:
+								holders[_holder_xch]=_holder_mount
+
 
 				page="page="+r.json()["next"]+"&"
 				if r.json()["next"]==r.json()["page"]:
@@ -161,18 +182,14 @@ def nft_holders():
 				tool_print(sys._getframe().f_lineno,e)
 				time.sleep(10)
 
-	dict = {}
-	for key in holders:
-		dict[key] = dict.get(key, 0) + 1
-	# print(dict)
-	return dict
+	return holders
 
 if __name__ == "__main__":
 	options=json.loads(open("config/options.json","rb").read())
 	holders=nft_holders()
 	xchaddrs,table=sql_all(holders)
 	for i in xchaddrs:
-		tool_print(str(sys._getframe().f_lineno)+" "+"i",i)
+		tool_print(str(sys._getframe().f_lineno)+" "+"transfer to",i)
 		transaction_id=cat_transfer(i)
 		tool_print(str(sys._getframe().f_lineno)+" "+"transaction_id",transaction_id)
 		while transaction_id:
