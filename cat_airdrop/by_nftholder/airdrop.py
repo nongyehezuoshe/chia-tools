@@ -161,17 +161,14 @@ def nft_holders():
 						else:
 							for iii in nft_special:
 								if iii.split(",")[0].strip() == _holder_nft:
-									_holder_mount=iii.split(",")[1].strip()
+									_holder_mount=int(iii.split(",")[1].strip())
 									break
 
 							tool_print(str(sys._getframe().f_lineno)+" "+"holders",i["owner_address_encoded_id"])
-							# holders.append([_holder_xch,_holder_mount])
-							# holders[_holder_xch]=holders[_holder_xch] or holders[_holder_xch]+_holder_mount
 							if _holder_xch in holders:
 								holders[_holder_xch]=int(holders[_holder_xch])+_holder_mount
 							else:
 								holders[_holder_xch]=_holder_mount
-
 
 				page="page="+str(r.json()["next"])+"&"
 				if r.json()["next"]==r.json()["page"]:
