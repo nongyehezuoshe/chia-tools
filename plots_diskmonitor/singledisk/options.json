@@ -4,7 +4,7 @@
 		"description":"需要检测硬盘容量的路径"
 	},
 	"disk_size":{
-		"value":25,
+		"value":100,
 		"description":"检测硬盘容量的阈值，单位:G"
 	},
 	"file_location":{

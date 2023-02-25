@@ -13,10 +13,10 @@
 		"description":"RPC对应的端口 | chia rpc endpoints port."
 	},
 	"cat_fingerprint":{
-		"value":463350105
+		"value":2824375978
 	},
 	"cat_wallet_id":{
-		"value":5,
+		"value":2,
 		"description":"代币的钱包ID | cat wallet id."
 	},
 	"cat_fee":{
@@ -28,31 +28,24 @@
 	},
 	"nft_collection_id":{
 		"value":[
-			{"col17jxrr7pwxuhxra86z4gr08tajk3mpr7gjst643a7gv0dc8p8p9aqdcvj30":10},
-			{"col1lqdkghxfwj7v0ajka0ww4q5ljkzjh8xgm28h7e3s4sh03smrmxxsn8qcpw":2}
+			{"col17jxrr7pwxuhxra86z4gr08tajk3mpr7gjst643a7gv0dc8p8p9aqdcvj30":1}
 		],
 		"description":"mintgarden.io定义的NFT collection ID及对应的代币空投数量 | the NFT collection ID from mintgarden.io and airdrop cat amount."
 	},
 	"nft_exclude_addr":{
-		"value":[
-			"xch1v82la0hyxut6ffjslwfcqu84tzyd9u3r99fkj8ye7gzhzel2zmnqrerwvq",
-			"xch12pt4qjxvx05skpqk8x70663fqjyqxg3jgh7deeek4ak8khw7c5hq8gh32h",
-			"xch1gdlhxafzs7eahul654rh462tvasegmpu7tvda3r3wml3aaauxtgqxp7umm",
-			"xch1rs3uxumpjzca9tltxm8kd6jqex6apztn8072zz48yswvgtj02vss4xdarw",
-			"xch1dyfxapzxzuv3zmhlm6ncfvjk83tpmfu308s9p92cuv74agmvztps58v0dh",
-			"xch17mxv57hptvnwv46cs80yw96uzvpmk07yun04p8mp87zvqwtzvl5qdutq9w"
-		],
+		"value":[],
 		"description":"需要排除的XCH地址 | exclude XCH address."
 	},
 	"nft_exclude_nftid":{
-		"value":[
-			"nft1ey2zt5amyvqax3yj7ywjr9j9cam9p6nhh8wamvmg350257xwhwwq9ht0zk",
-			"nft1wf4ut2q3nrdmetxupexgevrk0psyw28q4wdkch02rlf6farnpsmsjtdxks"
-		],
+		"value":[],
 		"description":"需要排除的NFT ID | exclude NFT ID."
 	},
 	"loop_time":{
 		"value":24,
 		"description":"循环间隔时长，单位:小时 | loop interval in hours."
+	},
+	"coroutine_num":{
+		"value":1,
+		"description":"协程（并发执行）数量 | number of coroutine"
 	}
 }

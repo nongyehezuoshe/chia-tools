@@ -1,0 +1,22 @@
+{
+	"disk":{
+		"value":[
+			{
+				"disk_path":"/media/sda1",
+				"disk_size":100,
+				"file_remove":"./location/1",
+				"file_endswith":["text","txt"],
+				"file_time":"20001030-20251231",
+				"time_interval":10
+			},
+			{
+				"disk_path":"/media/sdb1",
+				"disk_size":100,
+				"file_remove":"./location/2",
+				"file_endswith":["text","txt"],
+				"file_time":"20001030-20251231",
+				"time_interval":10
+			}
+		]
+	}
+}
