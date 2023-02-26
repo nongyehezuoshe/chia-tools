@@ -2,20 +2,58 @@
 	"disk":{
 		"value":[
 			{
-				"disk_path":"/media/sda1",
+				"disk_path":"/mnt/sas/0",
 				"disk_size":100,
-				"file_remove":"./location/1",
-				"file_endswith":["text","txt"],
+				"file_remove":"/mnt/sas/0/op",
+				"file_endswith":["plot"],
 				"file_time":"20001030-20251231",
-				"time_interval":10
+				"time_interval":10,
+				"pause":true
 			},
 			{
-				"disk_path":"/media/sdb1",
+				"disk_path":"/mnt/sas/1",
 				"disk_size":100,
-				"file_remove":"./location/2",
-				"file_endswith":["text","txt"],
+				"file_remove":"/mnt/sas/1/op",
+				"file_endswith":["plot"],
 				"file_time":"20001030-20251231",
-				"time_interval":10
+				"time_interval":10,
+				"pause":true
+			},
+			{
+				"disk_path":"/mnt/sas/2",
+				"disk_size":100,
+				"file_remove":"/mnt/sas/2/op",
+				"file_endswith":["plot"],
+				"file_time":"20001030-20251231",
+				"time_interval":10,
+				"pause":true
+			},
+			{
+				"disk_path":"/mnt/sas/3",
+				"disk_size":100,
+				"file_remove":"/mnt/sas/3/op",
+				"file_endswith":["plot"],
+				"file_time":"20001030-20251231",
+				"time_interval":10,
+				"pause":false
+			},
+			{
+				"disk_path":"/mnt/sas/4",
+				"disk_size":100,
+				"file_remove":"/mnt/sas/4/op",
+				"file_endswith":["plot"],
+				"file_time":"20001030-20251231",
+				"time_interval":10,
+				"pause":false
+			},
+			{
+				"disk_path":"/mnt/sas/5",
+				"disk_size":100,
+				"file_remove":"/mnt/sas/5/no",
+				"file_endswith":["fpt","spt"],
+				"file_time":"20001030-20251231",
+				"time_interval":10,
+				"pause":false
 			}
 		]
 	}

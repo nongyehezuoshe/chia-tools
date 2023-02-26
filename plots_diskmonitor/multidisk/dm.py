@@ -16,9 +16,13 @@ def tool_options(type):
 	return options[type]["value"]
 
 def plots_diskcheck(disk):
+	if disk["pause"]:
+		tool_print("warning",str(sys._getframe().f_lineno)+" "+disk["disk_path"],"Be seted pause, abort!")
+		return
+
 	while True:
 		disk_free=shutil.disk_usage(disk["disk_path"])[2]/1024**3
-		tool_print("normal",str(sys._getframe().f_lineno)+" "+disk["disk_path"],"Disk Free: "+str(disk_free)+" G")
+		tool_print("normal",str(sys._getframe().f_lineno)+" "+disk["disk_path"],"Disk Free: "+str(format(disk_free,".2f"))+" G")
 		if disk_free<disk["disk_size"]:
 			plots_remove(disk)
 		time.sleep(disk["time_interval"])
