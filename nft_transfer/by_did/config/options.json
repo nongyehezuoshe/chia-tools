@@ -1,6 +1,6 @@
 {
 	"chia_ssl":{
-		"value":"/root/.chia/mainnet/config/ssl",
+		"value":"/Users/yan/.chia/mainnet/config/ssl",
 		"description":"ssl证书/文件夹的路径 | chia ssl location."
 	},
 	"chia_port":{
@@ -13,18 +13,18 @@
 		"description":"RPC对应的端口 | chia rpc endpoints port."
 	},
 	"fingerprint":{
-		"value":3284221971
+		"value":1922510904
 	},
 	"fee":{
 		"value":0,
 		"description":"转账的手续费，单位：mojo | An optional blockchain fee, in mojos."
 	},
 	"minter_did":{
-		"value":"did:chia:1jaax757admslkd6525xyjwz9hc9zk8xcy52l8gp44lgjyed9mztsc3lp6a",
+		"value":"did:chia:1d6nu4drer2rqfwp82vf8pstgkfzk84rkaupdxdulyma4gegyr8hqydc2es",
 		"description":"将该DID铸造的所有NFT转移"
 	},
 	"target_address":{
-		"value":"xch1nz9mpgpct5p9z9rgrg4fvwhhwse68w8wvkzv57e4gnnhprccp37qv49a8g",
+		"value":"xch1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqm6ks6e8mvy",
 		"description":"NFT将要转移到的地址"
 	}
 }

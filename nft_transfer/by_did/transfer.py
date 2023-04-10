@@ -3,6 +3,7 @@ import requests,json,time,subprocess,sys,os,sqlite3
 import numpy as np
 import urllib3
 from bech32m_chia import bech32m
+import lib.chiahzs as chiahzs
 urllib3.disable_warnings()
 
 options={}

@@ -1,0 +1,38 @@
+{
+	"chia_server":{
+		"value":"wss://localhost:55400",
+		"description":"chia服务的地址"
+	},
+	"chia_ssl":{
+		"value":"/root/.chia/mainnet/config/ssl",
+		"description":"ssl证书/文件夹的路径 | chia ssl location."
+	},
+	"name":{
+		"value":"name_1",
+		"description":"为每一台机子自定义一个名称，以便于区分。"
+	},
+	"notif_url":{
+		"value":"https://xizhi.qqoq.net/xxx.send",
+		"description":"通知推送的网址。推荐：https://xizhi.qqoq.net"
+	},
+	"notif_reward":{
+		"value":true,
+		"description":"开启爆块通知"
+	},
+	"notif_point":{
+		"value":true,
+		"description":"开启掉算力通知。如果当前一个小时通过的初筛值比上一个小时低了10%以上则推送通知。"
+	},
+	"notif_heartbeat":{
+		"value":true,
+		"description":"开启掉线通知。每隔一定时间向服务器发起一次检测，如果服务器没用检测到这推送掉线通知。"
+	},
+	"notif_heartbeat_interval":{
+		"value":30,
+		"description":"掉线检测的间隔时长，单位：分钟。"
+	},
+	"notif_heartbeat_url":{
+		"value":"https://farmnotif.xch.wiki/heartbeat",
+		"description":"掉线检测网址。"
+	}
+}
