@@ -120,8 +120,8 @@ if __name__ == "__main__":
         ws.run_forever(
             sslopt={
                 "cert_reqs": ssl.CERT_NONE,
-                "certfile": os.path.join(tool_options("chia_ssl"),"wallet/private_wallet.crt"),
-                "keyfile": os.path.join(tool_options("chia_ssl"),"wallet/private_wallet.key"),
+                "certfile": os.path.join(tool_options("chia_ssl"),"wallet","private_wallet.crt"),
+                "keyfile": os.path.join(tool_options("chia_ssl"),"wallet","private_wallet.key"),
                 "ssl_context.check_hostname": False
             }
         )
