@@ -28,7 +28,7 @@ def on_message(ws, message):
     if wsmsg["command"]=="new_farming_info":
         print('{0} farming_info : {1}'.format(datetime.datetime.now(),wsmsg["data"]["farming_info"]))
         if tool_options("notif_point") and (time.time()-maindata["time_start_hour"])/60/60>1:
-            if maindata["passed_filter_last_hour"]>0 and (maindata["passed_filter_last_hour"]-maindata["passed_filter_current_hour"])/maindata["passed_filter_last_hour"]>0.1:
+            if maindata["passed_filter_last_hour"]>0 and (maindata["passed_filter_last_hour"]-maindata["passed_filter_current_hour"])/maindata["passed_filter_last_hour"]>0.2:
                 notifi_point([maindata["passed_filter_last_hour"],maindata["passed_filter_current_hour"]])
 
             maindata["passed_filter_last_hour"]=maindata["passed_filter_current_hour"]

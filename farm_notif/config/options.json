@@ -16,15 +16,15 @@
 		"description":"通知推送的网址。推荐：https://xizhi.qqoq.net"
 	},
 	"notif_reward":{
-		"value":true,
+		"value":false,
 		"description":"开启爆块通知"
 	},
 	"notif_point":{
-		"value":true,
+		"value":false,
 		"description":"开启掉算力通知。如果当前一个小时通过的初筛值比上一个小时低了10%以上则推送通知。"
 	},
 	"notif_heartbeat":{
-		"value":true,
+		"value":false,
 		"description":"开启掉线通知。每隔一定时间向服务器发起一次检测，如果服务器没用检测到这推送掉线通知。"
 	},
 	"notif_heartbeat_interval":{

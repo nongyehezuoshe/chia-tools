@@ -1,0 +1,51 @@
+{
+	"chia_ssl":{
+		"value":"/root/.chia/mainnet/config/ssl",
+		"description":"ssl证书/文件夹的路径 | chia ssl location."
+	},
+	"chia_port":{
+		"value":{
+			"wallet":9256,
+			"farmer":8559,
+			"full_node":8555,
+			"harvester":8560
+		},
+		"description":"RPC对应的端口 | chia rpc endpoints port."
+	},
+	"pawket":{
+		"value":"http://localhost:3333/batch_send"
+	},
+	"privateKey":{
+		"value":"2bbb671149cf3ced4a6bd507ea08a880a059a6fe38447b201eea6a72e2a3cc09"
+	},
+	"cat_Id":{
+		"value":"4965fb881379c5d30694e4a6df586295fbee66cb04af352f34c7ab2c19300412"
+	},
+	"cat_fingerprint":{
+		"value":2824375978
+	},
+	"cat_fee":{
+		"value":0,
+		"description":"代币转账的手续费，单位：mojo | An optional blockchain fee, in mojos."
+	},
+	"nft_collection_id":{
+		"value":[
+			{"col17jxrr7pwxuhxra86z4gr08tajk3mpr7gjst643a7gv0dc8p8p9aqdcvj30":10},
+			{"col1lqdkghxfwj7v0ajka0ww4q5ljkzjh8xgm28h7e3s4sh03smrmxxsn8qcpw":2},
+			{"col1ae2z2zpqm4v6rkm0j8mds7cy6yh055wjfdsxjn5jsx6jvntagf8sra4t2h":2}
+		],
+		"description":"mintgarden.io定义的NFT collection ID及对应的代币空投数量 | the NFT collection ID from mintgarden.io and airdrop cat amount."
+	},
+	"nft_exclude_addr":{
+		"value":[],
+		"description":"需要排除的XCH地址 | exclude XCH address."
+	},
+	"nft_exclude_nftid":{
+		"value":[],
+		"description":"需要排除的NFT ID | exclude NFT ID."
+	},
+	"loop_time":{
+		"value":24,
+		"description":"循环间隔时长，单位:小时 | loop interval in hours."
+	}
+}

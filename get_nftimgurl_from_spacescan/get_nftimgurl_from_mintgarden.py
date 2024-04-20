@@ -3,7 +3,7 @@
 import requests,json,time,subprocess,sys,os
 
 options={
-	"collectionid":"col1lqdkghxfwj7v0ajka0ww4q5ljkzjh8xgm28h7e3s4sh03smrmxxsn8qcpw",
+	"collectionid":"col1vfvrczhhpamusgqccphl5lwgqd26vyuvm668augqjr72cyht3hdsxyd7w2",
 	# "page":"page="+">i:0~s:0d9220afb24e4bb824670dabaaf4de53549f8590384d22d12d30cdfda544c177"+"&"
 	"page":""
 }
@@ -26,7 +26,7 @@ def get_addrfromspacescan():
 				for i in r.json()["items"]:
 					tool_print(sys._getframe().f_lineno,i)
 					with open("minted_nftid","a") as f:
-						f.writelines(i["encoded_id"]+"\n")
+						f.writelines(i["encoded_id"]+","+i["name"]+"\n")
 
 			options["page"]="page="+r.json()["next"]+"&"
 

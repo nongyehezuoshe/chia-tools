@@ -6,7 +6,7 @@ options={
 	"f":"708222379", # fingerprint / 指纹
 	"i":"4", # wallet_id / nft钱包ID
 	"m":"0", # A fee to add to the offer when it gets taken / 手续费
-	"r":"1:1" # A wallet id of an asset to receive and the amount you wish to receive (formatted like wallet_id:amount) /offer文件对应的请求xch的金额，格式：xch钱包id:xch金额
+	"r":"--request 1:1" # A wallet id of an asset to receive and the amount you wish to receive (formatted like wallet_id:amount) /offer文件对应的请求xch的金额，格式：xch钱包id:xch金额, 如果请求的是多个CAT，则再增加相应的--request即可（--request 1:1 --request 2:1）
 }
 maindata={
 	"allnfts":[]
@@ -27,7 +27,7 @@ def set_offer(nftid):
 	_p=nftid+"_x_"+str(_r.split(":")[1])+".offer"
 
 	while True:
-		_offer=subprocess.run(['chia', 'wallet', 'make_offer', '-f', _f, '-m', _m, '-p', 'offers/'+_p, '-o', _o, '-r', _r],capture_output=True,text=True,input="y\ny")
+		_offer=subprocess.run(['chia', 'wallet', 'make_offer', '-f', _f, '-m', _m, '-p', 'offers/'+_p, '-o', _o, _r],capture_output=True,text=True,input="y\ny")
 		if _offer.returncode==0 :
 			print(_offer.stdout)
 			break
